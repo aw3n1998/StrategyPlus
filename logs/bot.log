@@ -1,0 +1,14 @@
+﻿python : Traceback (most recent call last):
+所在位置 行:1 字符: 12
++ cd D:\po3; python main.py --dry-run 2>&1 | Out-File -FilePath D:\po3\ ...
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\po3\main.py", line 621, in <module>
+    main()
+    ~~~~^^
+  File "D:\po3\main.py", line 603, in main
+    if os.name != "nt":
+       ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?

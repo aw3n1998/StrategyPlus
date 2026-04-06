@@ -1,0 +1,101 @@
+2026-04-06 17:34:46 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 17:34:53 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 17:39:36 | ERROR    | __main__:260 | [15M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 17:39:36 | ERROR    | __main__:336 | [1M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 17:43:44 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 17:43:51 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 17:48:34 | ERROR    | __main__:260 | [15M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 17:48:34 | ERROR    | __main__:336 | [1M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 17:49:34 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 17:49:41 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 17:53:13 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 17:53:20 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 17:55:21 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 17:55:29 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 17:58:15 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 17:58:22 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 18:01:02 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 18:01:09 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 18:06:53 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 18:07:00 | ERROR    | po3.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 18:11:43 | ERROR    | __main__:260 | [15M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 18:11:43 | ERROR    | __main__:336 | [1M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 19:35:10 | ERROR    | core.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 19:35:17 | ERROR    | core.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 19:37:30 | ERROR    | __main__:211 | 市场加载失败: bitget GET https://api.bitget.com/api/v2/spot/public/coins
+2026-04-06 19:38:40 | ERROR    | core.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 19:38:47 | ERROR    | core.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 19:42:31 | ERROR    | __main__:211 | 市场加载失败: bitget GET https://api.bitget.com/api/v2/margin/currencies
+2026-04-06 19:44:27 | ERROR    | core.data_feed:160 | [WS] SUI/USDT:USDT 15m 历史初始化全部失败
+2026-04-06 19:44:34 | ERROR    | core.data_feed:160 | [WS] SUI/USDT:USDT 1m 历史初始化全部失败
+2026-04-06 19:49:17 | ERROR    | __main__:260 | [15M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 19:49:17 | ERROR    | __main__:336 | [1M-SUI/USDT:USDT] DataFeed 初始化超时（5分钟）
+2026-04-06 20:48:26 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:26 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:28 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:30 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:31 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:32 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:33 | ERROR    | core.data_feed:160 | [WS] B 15m 历史初始化全部失败
+2026-04-06 20:48:34 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:36 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:36 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:38 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:40 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:40 | ERROR    | core.data_feed:160 | [WS] B 1m 历史初始化全部失败
+2026-04-06 20:48:41 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:42 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:44 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:46 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:46 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:47 | ERROR    | core.data_feed:160 | [WS] T 15m 历史初始化全部失败
+2026-04-06 20:48:48 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:50 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:48:51 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:44 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:44 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:46 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:48 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:49 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:50 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:51 | ERROR    | core.data_feed:160 | [WS] B 15m 历史初始化全部失败
+2026-04-06 20:53:52 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:54 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:54 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:56 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:58 | ERROR    | core.data_feed:160 | [WS] B 1m 历史初始化全部失败
+2026-04-06 20:53:58 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:53:59 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:54:00 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:54:02 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 20:58:14 | ERROR    | __main__:183 | [15M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:14 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:16 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:18 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:19 | ERROR    | __main__:183 | [15M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:20 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:21 | ERROR    | core.data_feed:160 | [WS] B 15m 历史初始化全部失败
+2026-04-06 20:58:22 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:24 | ERROR    | __main__:183 | [15M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:24 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:58:26 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:39 | ERROR    | __main__:183 | [15M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:39 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:41 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:43 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:44 | ERROR    | __main__:183 | [15M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:45 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:46 | ERROR    | core.data_feed:160 | [WS] B 15m 历史初始化全部失败
+2026-04-06 20:59:47 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:49 | ERROR    | __main__:183 | [15M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:49 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:51 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 20:59:53 | ERROR    | core.data_feed:160 | [WS] B 1m 历史初始化全部失败
+2026-04-06 20:59:53 | ERROR    | __main__:263 | [1M] 循环异常: 'BTC/USDT:USDT'
+2026-04-06 21:05:43 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 21:05:43 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 21:05:45 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 21:05:47 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 21:05:48 | ERROR    | __main__:183 | [15M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 21:05:49 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'
+2026-04-06 21:05:51 | ERROR    | __main__:263 | [1M] 循环异常: 'dict' object has no attribute 'wait'

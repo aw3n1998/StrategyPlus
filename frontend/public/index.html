@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO3 黑金量化终端</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        body {
+            background-color: #050505;
+            color: #d4af37;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .gold-border { border: 1px solid rgba(212, 175, 55, 0.3); }
+        .gold-glow { box-shadow: 0 0 15px rgba(212, 175, 55, 0.1); }
+        .card-bg { background: linear-gradient(145deg, #0f0f0f, #050505); }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+    <script type="text/babel">
+        const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } = Recharts;
+
+        const Dashboard = () => {
+            const [overview, setOverview] = React.useState({ total_pnl: 0, win_rate: 0, total_trades: 0, active_strategies: 0 });
+            const [compareData, setCompareData] = React.useState([]);
+            const [selectedStrategy, setSelectedStrategy] = React.useState(null);
+            const [detail, setDetail] = React.useState(null);
+
+            React.useEffect(() => {
+                // Fetch Overview
+                fetch('http://localhost:5000/api/overview').then(res => res.json()).then(setOverview);
+                // Fetch Compare Data
+                fetch('http://localhost:5000/api/strategies/compare').then(res => res.json()).then(setCompareData);
+            }, []);
+
+            const fetchDetail = (sid) => {
+                fetch(`http://localhost:5000/api/strategies/${sid}`).then(res => res.json()).then(data => {
+                    setDetail(data);
+                    setSelectedStrategy(sid);
+                });
+            };
+
+            return (
+                <div className="p-6 space-y-6">
+                    {/* Header */}
+                    <header className="flex justify-between items-center border-b border-[#d4af37]/30 pb-4">
+                        <h1 className="text-3xl font-bold tracking-tighter italic">QUANT<span className="text-white">OS</span> BLACK GOLD</h1>
+                        <div className="flex gap-8 text-sm uppercase tracking-widest">
+                            <div>Status: <span className="text-green-500 font-bold">● LIVE</span></div>
+                            <div>Redis: <span className="text-green-500">CONNECTED</span></div>
+                        </div>
+                    </header>
+
+                    {/* Stats Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        {[
+                            { label: 'Total PnL', value: `$${overview.total_pnl}`, color: 'text-[#d4af37]' },
+                            { label: 'Win Rate', value: `${overview.win_rate}%`, color: 'text-white' },
+                            { label: 'Total Trades', value: overview.total_trades, color: 'text-white' },
+                            { label: 'Active Strats', value: overview.active_strategies, color: 'text-[#d4af37]' }
+                        ].map((s, i) => (
+                            <div key={i} className="card-bg gold-border p-4 rounded-lg gold-glow">
+                                <p className="text-xs text-gray-500 uppercase">{s.label}</p>
+                                <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        {/* Strategy Comparison Chart */}
+                        <div className="lg:col-span-2 card-bg gold-border p-6 rounded-xl">
+                            <h2 className="text-lg font-bold mb-4 uppercase tracking-wider">Strategy Arena (PnL Compare)</h2>
+                            <div className="h-[400px]">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <LineChart data={compareData}>
+                                        <CartesianGrid strokeDasharray="3 3" stroke="#222" />
+                                        <XAxis dataKey="time" stroke="#666" fontSize={10} />
+                                        <YAxis stroke="#666" fontSize={10} />
+                                        <Tooltip contentStyle={{ backgroundColor: '#000', border: '1px solid #d4af37' }} />
+                                        <Legend />
+                                        <Line type="monotone" dataKey="total" stroke="#d4af37" strokeWidth={3} dot={false} />
+                                        {/* Dynamic lines for each strategy will appear here */}
+                                        <Line type="monotone" dataKey="PO3_V1" stroke="#3b82f6" strokeWidth={2} dot={false} />
+                                    </LineChart>
+                                </ResponsiveContainer>
+                            </div>
+                        </div>
+
+                        {/* Strategy Selector / Quick List */}
+                        <div className="card-bg gold-border p-6 rounded-xl overflow-hidden">
+                            <h2 className="text-lg font-bold mb-4 uppercase">Strategies</h2>
+                            <div className="space-y-3">
+                                <button 
+                                    onClick={() => fetchDetail('PO3_V1')}
+                                    className={`w-full text-left p-4 rounded-lg border transition-all ${selectedStrategy === 'PO3_V1' ? 'border-[#d4af37] bg-[#d4af37]/10' : 'border-gray-800 hover:border-gray-600'}`}
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <span className="font-bold">PO3_V1 (AMD Scalper)</span>
+                                        <span className="text-xs text-green-500 italic">ACTIVE</span>
+                                    </div>
+                                    <p className="text-xs text-gray-400 mt-1">Bitget Futures | BTC/USDT</p>
+                                </button>
+                                {/* Add more strategies here later */}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Detailed Analysis Section (Appears when a strategy is selected) */}
+                    {detail && (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeIn">
+                            <div className="card-bg gold-border p-6 rounded-xl">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h2 className="text-lg font-bold uppercase tracking-widest">Confidence Trend</h2>
+                                    <span className="text-xs bg-black px-2 py-1 rounded text-[#d4af37]">STRENGTH INDEX</span>
+                                </div>
+                                <div className="h-[250px]">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart data={detail.curve}>
+                                            <XAxis dataKey="time" hide />
+                                            <YAxis hide />
+                                            <Tooltip contentStyle={{ backgroundColor: '#000' }} />
+                                            <Bar dataKey="confidence" fill="#d4af37" opacity={0.8} />
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            </div>
+
+                            <div className="card-bg gold-border p-6 rounded-xl">
+                                <h2 className="text-lg font-bold mb-4 uppercase tracking-widest">Symbol Distribution</h2>
+                                <div className="space-y-4">
+                                    {Object.entries(detail.symbols).map(([sym, pnl]) => (
+                                        <div key={sym} className="flex justify-between items-end">
+                                            <div>
+                                                <p className="text-sm font-bold">{sym}</p>
+                                                <div className="w-[200px] h-2 bg-gray-900 rounded-full mt-1">
+                                                    <div className="h-full bg-[#d4af37] rounded-full" style={{ width: '70%' }}></div>
+                                                </div>
+                                            </div>
+                                            <p className={`font-bold ${pnl >= 0 ? 'text-green-500' : 'text-red-500'}`}>${pnl}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Dashboard />);
+    </script>
+</body>
+</html>
